@@ -1,8 +1,10 @@
-function TodoItem(props) {
+import './TodoItem.css'
+
+function TodoItem({text}) {
     return(
       <li>
         <span>V</span>
-        <p>{props.text}</p>
+        <p>{text}</p>
         <span>X</span>
       </li>
     )

@@ -3,7 +3,6 @@ import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from "./CreateTodoButton";
-import './App.css';
 
 const defaultTasks = [
   { text: 'Cut onions', completed: true },
@@ -14,15 +13,18 @@ const defaultTasks = [
 
 function App() {
 
-
-
   return (
     <>
 
-      <TodoCounter total={6} completed={4} />
+      <TodoCounter 
+      total={6} 
+      completed={4} 
+      />
+
       <TodoSearch />
 
       <TodoList>
+        
         {defaultTasks.map(todo => (
           <TodoItem 
           key={todo.text} 
@@ -30,6 +32,7 @@ function App() {
           completed={todo.completed} 
           />
         ))}
+
       </TodoList>
       
       <CreateTodoButton />
