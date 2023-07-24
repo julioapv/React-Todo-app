@@ -1,12 +1,15 @@
+import React, { useState } from 'react';
 import './TodoSearch.css'
 
-function TodoSearch() {
+function TodoSearch({ searchValue, setSearchValue }) {
+
   return (
     <input 
     className='input'
     placeholder='Learn PHP'
+    value={searchValue}
     onChange={(e) => {
-      console.log(e.target.value);
+      setSearchValue(e.target.value);
     }}
     />
   )
