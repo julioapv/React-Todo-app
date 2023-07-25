@@ -38,9 +38,18 @@ function App() {
     const todoIndex = newTodos.findIndex(
         (todo) => todo.text === text
       );
-    newTodos[todoIndex].completed = true;
+    newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
     setTodos(newTodos);
   }
+
+  // const completeTodo = (text) => {
+  //   const newTodos = [...todos];
+  //   const todoIndex = newTodos.findIndex(
+  //       (todo) => todo.text === text
+  //     );
+  //   newTodos[todoIndex].completed = true;
+  //   setTodos(newTodos);
+  // }
 
   const deleteTodo = (text) => {
     const newTodos = [...todos];

@@ -11,42 +11,40 @@
 .TodoItem-p {
     margin: 24px 0 24px 24px;
     width: calc(100% - 120px);
-    font-size: 18px;
+    font-size: 20px;
     line-height: 24px;
     font-weight: 400;
 }
 
 .TodoItem-p--complete {
     text-decoration: line-through;
+    color: gray;
+    transition: 0.5s ease;
 }
 
-.Icon {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 48px;
-    width: 48px;
-    font-size: 24px;
-    font-weight: bold;
-    /* background-color: #CCC; */
+.icon {
+    font-size: 2rem;
 }
 
-.Icon-check {
-    position: absolute;
-    left: 12px;
+.icon-check--active {
+    color: #44A044;
+    transition: ease-in 0.4s;
 }
 
-.Icon-check--active {
-    color: #4caf50;
+.icon-check--active:hover {
+    color: #337833;
+    transition: ease-in 0.2s;
 }
 
-.Icon-delete {
-    position: absolute;
-    top: -24px;
-    right: 0;
+.icon-check--unactive {
+    color: #1E1E1E;
 }
 
-.Icon-delete:hover {
-    color: red;
+.icon-delete {
+    color: #D63E3E;
+    transition: ease-out 0.2s;
+}
+
+.icon-delete:hover {
+    color: #961616;
 }
