@@ -3,6 +3,8 @@ import { AppUI } from './AppUI';
 import { useLocalStorage } from './useLocalStorage';
 import react from 'react';
 
+// localStorage.removeItem('TODOS_V1');
+
 // const defaultTodos = [
 //   { text: 'Cut onions', completed: false },
 //   { text: 'Learn TailWind', completed: true },
@@ -12,11 +14,15 @@ import react from 'react';
 // ]
 
 // localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
-// localStorage.removeItem('TODOS_V1');
 
 function App() {
 
-  const [todos, saveTodos] = useLocalStorage('TODOS_V1', []);
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    loading,
+    error,
+  } = useLocalStorage('TODOS_V1', []);
   
   const [searchValue, setSearchValue] = React.useState('');  
 
@@ -33,23 +39,6 @@ function App() {
       //return todo.text.toLowerCase().includes(searchValue.toLowerCase())
     }
   );
-
-  console.log('log1');
-
-  // react.useEffect(() => {
-  //   console.log('loooog2');
-  // });
-
-  // react.useEffect(() => {
-  //   console.log('loooog2');
-  // }, []);
-
-  
-  react.useEffect(() => {
-    console.log('loooog2');
-  }, [totalTodos]);
-
-  console.log('log3');
 
   const completeTodo = (text) => {
     const newTodos = [...todos];
@@ -80,6 +69,8 @@ function App() {
 
   return (
     <AppUI
+      loading={loading}
+      error={error}
       completedTodos={completedTodos}
       totalTodos={totalTodos}
       searchValue={searchValue}
