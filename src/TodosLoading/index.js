@@ -4,13 +4,9 @@ import Skeleton from '@mui/material/Skeleton';
 const TodosLoading = () => {
 
     return (
-    <li className="TodoItem">
-        {/* <CompleteIcon/> */}
-
+    <div className="TodoItem">
         <Skeleton variant="rectangular" sx={{width: '100%', background: '#f0f4fc',}} height={70} />
-
-        {/* <DeleteIcon/> */}
-    </li>
+    </div>
     )
 }
 
