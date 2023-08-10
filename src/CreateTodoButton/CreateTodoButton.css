@@ -19,6 +19,9 @@ text-decoration: none;
 user-select: none;
 -webkit-user-select: none;
 z-index: 1;
+border-radius: 123px;
+border-radius: 123px;
+border-radius: 123px;
 
 transform: rotate(0);
 transition: .3s ease;
@@ -32,9 +35,6 @@ outline: none;
 
 .addButton:hover {
 background-position: -20px -20px;
-transform: rotate(180deg);
-}
-
-.addButton:focus:not(:active) {
-box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+transform: scale(0.9);
+/* transform: rotate(180deg); */
 }

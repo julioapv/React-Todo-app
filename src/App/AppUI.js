@@ -40,7 +40,7 @@ function AppUI () {
             </>
             )}
             {error && <TodosError />}
-            {(!loading && searchedTodos.lenght === 0) && <InitialMessage />}
+            {(!loading && searchedTodos.length === 0) && <InitialMessage />}
 
             {/* {loading && <p>Loading your tasks, please wait...</p>}
             {error && <p>Something went wrong, but don't worry!</p>} */}

@@ -1,0 +1,14 @@
+.initialMessage-container {
+    margin-top: 50px;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.initialMessage-container p {
+    font-size: 2rem;
+}
+
+.initialMessage-container img {
+    width: 50%;
+    max-width: 250px;
+}
